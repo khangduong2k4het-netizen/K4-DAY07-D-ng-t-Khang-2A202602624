@@ -1,0 +1,44 @@
+[
+  {
+    "id": "Q1",
+    "question": "Sinh viên ĐHCQ khóa 48 (SNTH), 49, 50, 51 đăng ký online học bổng Hỗ trợ học tập HKĐ2026 từ ngày nào đến ngày nào theo thông báo dành cho sinh viên?",
+    "metadata_filter": {"audience": "student"},
+    "gold_answer": "Từ ngày 25/3/2026 đến hết ngày 08/4/2026 tại student.ueh.edu.vn. Không lấy ngày 07/4/2026 trong kế hoạch xử lý hành chính làm ngày bắt đầu đăng ký.",
+    "expected_doc_ids": ["undergraduate-scholarship-page"],
+    "excluded_doc_ids": ["undergraduate-scholarship"],
+    "evidence": [{"doc_id": "undergraduate-scholarship-page", "quote": "từ ngày 25/3/2026 đến hết ngày 08/4/2026"}],
+    "filter_reason": "Tài liệu staff có dòng triển khai thông báo, tiếp nhận đề nghị ngày 07/4/2026. Lọc student loại kế hoạch hành chính và giữ thông báo đăng ký áp dụng cho sinh viên. Đây là ca kiểm tra chống lấy nhầm đối tượng, không phải cam kết mọi mô hình không lọc đều trả lời sai."
+  },
+  {
+    "id": "Q2",
+    "question": "Xét học bổng Khuyến khích học tập HKĐ2026, song ngành Công nghệ truyền thông và Kinh doanh quốc tế K50 cần tối thiểu bao nhiêu tín chỉ, còn các chương trình khác thì sao?",
+    "metadata_filter": {"audience": "student"},
+    "gold_answer": "Song ngành Công nghệ truyền thông và Kinh doanh quốc tế K50 cần 14 tín chỉ; các chương trình đào tạo còn lại cần 15 tín chỉ trong HKC2025.",
+    "expected_doc_ids": ["graduate-scholarship"],
+    "evidence": [{"doc_id": "graduate-scholarship", "quote": "| Song ngành Công nghệ truyền thông và Kinh doanh quốc tế – K50 | 14 |"}, {"doc_id": "graduate-scholarship", "quote": "| Các chương trình đào tạo còn lại | 15 |"}]
+  },
+  {
+    "id": "Q3",
+    "question": "Học bổng VAS năm 2026 hỗ trợ bao nhiêu học phí và yêu cầu điểm nào đối với sinh viên khóa 49, 50, 51?",
+    "metadata_filter": {"audience": "student"},
+    "gold_answer": "Hỗ trợ 100% học phí. Điểm trung bình chung của HKC2025 và HKĐ2026 từ 2,5 trở lên; điểm rèn luyện học kỳ gần nhất từ 65 trở lên. Còn phải chưa nhận học bổng khác trong HKC2026 và có hoàn cảnh khó khăn, có nguy cơ gián đoạn việc học nếu không được hỗ trợ.",
+    "expected_doc_ids": ["masters-science-technology-scholarship"],
+    "evidence": [{"doc_id": "masters-science-technology-scholarship", "quote": "100% học phí"}, {"doc_id": "masters-science-technology-scholarship", "quote": "Điểm trung bình chung của 02 học kỳ gần nhất (học kỳ cuối năm 2025 và học kỳ đầu năm 2026) từ 2,5 trở lên"}, {"doc_id": "masters-science-technology-scholarship", "quote": "Điểm rèn luyện học kỳ gần nhất từ 65 trở lên"}, {"doc_id": "masters-science-technology-scholarship", "quote": "Chưa nhận học bổng nào khác trong học kỳ cuối năm 2026"}, {"doc_id": "masters-science-technology-scholarship", "quote": "Hoàn cảnh gia đình khó khăn, có nguy cơ gián đoạn việc học nếu không được hỗ trợ"}]
+  },
+  {
+    "id": "Q4",
+    "question": "Học bổng ngành Toán học kỳ I năm 2026–2027 có giá trị và số suất bao nhiêu? Hạn đăng ký của sinh viên UEH là ngày nào?",
+    "metadata_filter": {"audience": "student"},
+    "gold_answer": "26.125.000 đồng mỗi lần xét, gồm 5.225.000 đồng/tháng trong 5 tháng. Có 150 suất trên toàn quốc, không phải riêng UEH. Sinh viên UEH đăng ký đến hết ngày 09/09/2026.",
+    "expected_doc_ids": ["student-financial-aid"],
+    "evidence": [{"doc_id": "student-financial-aid", "quote": "26.125.000 đồng (5.225.000 đồng/1 tháng, được cấp 05 tháng với mỗi lần xét)"}, {"doc_id": "student-financial-aid", "quote": "150 suất cho tất cả các sinh viên đạt điều kiện toàn quốc"}, {"doc_id": "student-financial-aid", "quote": "đến hết ngày 09/09/2026"}]
+  },
+  {
+    "id": "Q5",
+    "question": "Theo thông báo học bổng Hỗ trợ học tập HKC2026 dành cho K52, thời gian đăng ký online và ngày nộp hồ sơ bản cứng là khi nào?",
+    "metadata_filter": {"audience": "student"},
+    "gold_answer": "Đăng ký online từ 17/8/2026 đến hết 02/9/2026. Nộp bản cứng ngày 04/9/2026 và 07/9/2026 tại Phòng A.002, Cơ sở UEH Nguyễn Đình Chiểu, nếu đơn ở trạng thái Đã kiểm tra giấy tờ. Không cung cấp được bản gốc thì UEH xem như từ chối tiếp tục xét học bổng.",
+    "expected_doc_ids": ["masters-scholarship"],
+    "evidence": [{"doc_id": "masters-scholarship", "quote": "từ ngày 17/8/2026 đến hết ngày 02/9/2026"}, {"doc_id": "masters-scholarship", "quote": "Phòng A.002, Cơ sở UEH Nguyễn Đình Chiểu"}, {"doc_id": "masters-scholarship", "quote": "ngày 04/9/2026 và ngày 07/9/2026 nếu đơn đăng ký ở trạng thái “Đã kiểm tra giấy tờ”"}, {"doc_id": "masters-scholarship", "quote": "Trường hợp sinh viên không cung cấp được bản gốc của hồ sơ, UEH xem như sinh viên từ chối tiếp tục xét học bổng"}]
+  }
+]

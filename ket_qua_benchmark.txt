@@ -1,0 +1,68 @@
+Scholarship Benchmark Report
+Collection size: 68
+Embedding backend: mock embeddings fallback (MD5-based, semantic noise expected)
+
+Query: Q1 - Sinh viên ĐHCQ khóa 48 (SNTH), 49, 50, 51 đăng ký online học bổng Hỗ trợ học tập HKĐ2026 từ ngày nào đến ngày nào theo thông báo dành cho sinh viên?
+Gold answer: Từ ngày 25/3/2026 đến hết ngày 08/4/2026 tại student.ueh.edu.vn. Không lấy ngày 07/4/2026 trong kế hoạch xử lý hành chính làm ngày bắt đầu đăng ký.
+Expected doc ids: ['undergraduate-scholarship-page']
+Filter: {'audience': 'student'}
+  WITH FILTER
+    1. score=0.2512 doc_id=student-financial-aid chunk=student-financial-aid#0
+    2. score=0.2254 doc_id=graduate-support-page chunk=graduate-support-page#0
+    3. score=0.2036 doc_id=student-financial-aid chunk=student-financial-aid#5
+  WITHOUT FILTER
+    1. score=0.4167 doc_id=undergraduate-scholarship chunk=undergraduate-scholarship#7
+    2. score=0.2905 doc_id=undergraduate-scholarship chunk=undergraduate-scholarship#2
+    3. score=0.2512 doc_id=student-financial-aid chunk=student-financial-aid#0
+
+Query: Q2 - Xét học bổng Khuyến khích học tập HKĐ2026, song ngành Công nghệ truyền thông và Kinh doanh quốctế K50 cần tối thiểu bao nhiêu tín chỉ, còn các chương trình khác thì sao?
+Gold answer: Song ngành Công nghệ truyền thông và Kinh doanh quốc tế K50 cần 14 tín chỉ; các chương trình đào tạo còn lại cần 15 tín chỉ trong HKC2025.
+Expected doc ids: ['graduate-scholarship']
+Filter: {'audience': 'student'}
+  WITH FILTER
+    1. score=0.2771 doc_id=student-support-page chunk=student-support-page#3
+    2. score=0.1938 doc_id=student-financial-aid chunk=student-financial-aid#5
+    3. score=0.1622 doc_id=masters-science-technology-scholarship chunk=masters-science-technology-scholarship#0
+  WITHOUT FILTER
+    1. score=0.2771 doc_id=student-support-page chunk=student-support-page#3
+    2. score=0.2194 doc_id=undergraduate-scholarship chunk=undergraduate-scholarship#4
+    3. score=0.1938 doc_id=student-financial-aid chunk=student-financial-aid#5
+
+Query: Q3 - Học bổng VAS năm 2026 hỗ trợ bao nhiêu học phí và yêu cầu điểm nào đối với sinh viên khóa 49, 50, 51?
+Gold answer: Hỗ trợ 100% học phí. Điểm trung bình chung của HKC2025 và HKĐ2026 từ 2,5 trở lên; điểm rèn luyện học kỳ gần nhất từ 65 trở lên. Còn phải chưa nhận học bổng khác trong HKC2026 và có hoàn cảnh khó khăn, có nguy cơ gián đoạn việc học nếu không được hỗ trợ.
+Expected doc ids: ['masters-science-technology-scholarship']
+Filter: {'audience': 'student'}
+  WITH FILTER
+    1. score=0.3671 doc_id=student-financial-aid chunk=student-financial-aid#9
+    2. score=0.3144 doc_id=graduate-scholarship chunk=graduate-scholarship#3
+    3. score=0.2164 doc_id=undergraduate-scholarship-info chunk=undergraduate-scholarship-info#0
+  WITHOUT FILTER
+    1. score=0.3671 doc_id=student-financial-aid chunk=student-financial-aid#9
+    2. score=0.3144 doc_id=graduate-scholarship chunk=graduate-scholarship#3
+    3. score=0.2164 doc_id=undergraduate-scholarship-info chunk=undergraduate-scholarship-info#0
+
+Query: Q4 - Học bổng ngành Toán học kỳ I năm 2026–2027 có giá trị và số suất bao nhiêu? Hạn đăng ký của sinh viên UEH là ngày nào?
+Gold answer: 26.125.000 đồng mỗi lần xét, gồm 5.225.000 đồng/tháng trong 5 tháng. Có 150 suất trên toàn quốc, không phải riêng UEH. Sinh viên UEH đăng ký đến hết ngày 09/09/2026.
+Expected doc ids: ['student-financial-aid']
+Filter: {'audience': 'student'}
+  WITH FILTER
+    1. score=0.2657 doc_id=undergraduate-scholarship-info chunk=undergraduate-scholarship-info#0
+    2. score=0.2441 doc_id=undergraduate-scholarship-page chunk=undergraduate-scholarship-page#6
+    3. score=0.2008 doc_id=undergraduate-scholarship-info chunk=undergraduate-scholarship-info#1
+  WITHOUT FILTER
+    1. score=0.2657 doc_id=undergraduate-scholarship-info chunk=undergraduate-scholarship-info#0
+    2. score=0.2441 doc_id=undergraduate-scholarship-page chunk=undergraduate-scholarship-page#6
+    3. score=0.2008 doc_id=undergraduate-scholarship-info chunk=undergraduate-scholarship-info#1
+
+Query: Q5 - Theo thông báo học bổng Hỗ trợ học tập HKC2026 dành cho K52, thời gian đăng ký online và ngày nộp hồ sơ bản cứng là khi nào?
+Gold answer: Đăng ký online từ 17/8/2026 đến hết 02/9/2026. Nộp bản cứng ngày 04/9/2026 và 07/9/2026 tại Phòng A.002, Cơ sở UEH Nguyễn Đình Chiểu, nếu đơn ở trạng thái Đã kiểm tra giấy tờ. Không cung cấp được bản gốc thì UEH xem như từ chối tiếp tục xét học bổng.
+Expected doc ids: ['masters-scholarship']
+Filter: {'audience': 'student'}
+  WITH FILTER
+    1. score=0.2283 doc_id=graduate-scholarship chunk=graduate-scholarship#7
+    2. score=0.1855 doc_id=student-support-page chunk=student-support-page#0
+    3. score=0.1815 doc_id=student-financial-aid chunk=student-financial-aid#3
+  WITHOUT FILTER
+    1. score=0.2790 doc_id=undergraduate-scholarship chunk=undergraduate-scholarship#8
+    2. score=0.2283 doc_id=graduate-scholarship chunk=graduate-scholarship#7
+    3. score=0.1855 doc_id=student-support-page chunk=student-support-page#0

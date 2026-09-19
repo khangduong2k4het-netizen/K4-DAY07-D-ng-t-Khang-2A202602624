@@ -18,6 +18,7 @@ from src.embeddings import (
     _mock_embed,
 )
 from src.models import Document
+from src.document_io import load_document
 from src.store import EmbeddingStore
 
 SAMPLE_FILES = [
@@ -46,14 +47,7 @@ def load_documents_from_files(file_paths: list[str]) -> list[Document]:
             print(f"Skipping missing file: {path}")
             continue
 
-        content = path.read_text(encoding="utf-8")
-        documents.append(
-            Document(
-                id=path.stem,
-                content=content,
-                metadata={"source": str(path), "extension": path.suffix.lower()},
-            )
-        )
+        documents.append(load_document(path))
 
     return documents
 

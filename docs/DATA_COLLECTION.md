@@ -90,8 +90,12 @@ course-registration-deadline,data/dang-ky-hoc-phan/hoc-phan.md,Hạn đăng ký 
 
 ## 6. Checklist trước benchmark
 
-- [ ] Có 5–10 file cùng một chủ đề, `doc_id` không trùng.
-- [ ] Mỗi file có đủ metadata bắt buộc (`doc_id`, `title`, `source_url`, `retrieved_at`, `document_version`, `audience`); `sources.csv` khớp một-một với file.
-- [ ] `audience` có ít nhất 2 giá trị khác nhau trong bộ tài liệu — nếu chỉ một giá trị thì `metadata_filter` không có gì để lọc.
-- [ ] URL là nguồn gốc, truy cập được, và dữ liệu không nhạy cảm.
-- [ ] Cả 5 benchmark query đều kiểm chứng được từ corpus, và ít nhất một câu cần `metadata_filter={"audience": "student"}` mới trả lời đúng.
+Đối chiếu ngày 2026-09-19 cho [corpus học bổng UEH](../data/scholarships/): 9 tài liệu từ 8 URL, gồm 8 file `student` và 1 file `staff`. Xem [biên bản thu thập và giới hạn nguồn](../report/DATA_COLLECTION_SCHOLARSHIPS.md) và [5 câu hỏi có chứng cứ](../report/scholarship_queries.json). Q1 dùng bộ lọc `student` để tránh lấy nhầm lịch xử lý của đơn vị. Các dấu kiểm xác nhận dữ liệu và chứng cứ, không phải kết quả chạy mô hình retrieval.
+
+Kiểm tra bằng `python scripts/validate_scholarship_corpus.py`. Khi nạp, dùng `src.document_io.load_document()` hoặc `main.load_documents_from_files()` để tách frontmatter khỏi nội dung trước khi chunk. Chỉ nạp `data/scholarships/*.md` cho bộ benchmark này.
+
+- [X] Có 5–10 file cùng một chủ đề, `doc_id` không trùng.
+- [X] Mỗi file có đủ metadata bắt buộc (`doc_id`, `title`, `source_url`, `retrieved_at`, `document_version`, `audience`); `sources.csv` khớp một-một với file.
+- [X] `audience` có ít nhất 2 giá trị khác nhau trong bộ tài liệu — nếu chỉ một giá trị thì `metadata_filter` không có gì để lọc.
+- [X] URL là nguồn gốc, truy cập được, và dữ liệu không nhạy cảm.
+- [X] Cả 5 benchmark query đều kiểm chứng được từ corpus, và ít nhất một câu cần `metadata_filter={"audience": "student"}` mới trả lời đúng.
